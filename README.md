@@ -88,11 +88,19 @@ byte schedICON[8] = {
 ### 2. Time Setting
 시간 셋팅은 4개의 버튼으로 제어합니다.
 
+TinyFarmer-BitMoss-Controller/src/BitmossControl_128A/configuration.h
+
 ```
-pin 29 - 셋팅모드
-pin 30 - 저장
-pin 31 - Increase (+)
-pin 32 - Decrease (-)
+...
+// Clock Setting 
+#define SET          26  //pin 26 - 셋팅모드
+#define STORE        27  //pin 27 - 저장
+#define INCREASE     29  //pin 29 - Increase (+)
+#define DECREASE     31  //pin 31 - Decrease (-)
+
+...
+
+
 ```
 
 
