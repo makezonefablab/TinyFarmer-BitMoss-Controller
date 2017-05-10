@@ -31,7 +31,7 @@ TinyFarmer-BitMoss-Controller/src/BitmossControl_128A/BitmossControl_128A.ino
 
 위의 소스 파일을 그대로 사용할 수 있습니다. 단, 몇가지 추가 장착되는 모듈에 대한 수정이 발생될 수 있습니다.
 
-1. LCD
+### 1. LCD
 i2c를 인터페이스로 사용하는 character LCD를 활용하여 추가적인 신호선 사용을 줄였습니다.
 
 [*상세한 LCD 스팩 보기 - 사이트 바로가기*](https://www.icbanq.com/P007320703)
@@ -81,6 +81,15 @@ byte schedICON[8] = {
 ......
 ```
 
+### 2. Time Setting
+시간 셋팅은 4개의 버튼으로 제어합니다.
+
+```
+pin 29 - 셋팅모드
+pin 30 - 저장
+pin 31 - Increase (+)
+pin 32 - Decrease (-)
+```
 
 
 설치 
