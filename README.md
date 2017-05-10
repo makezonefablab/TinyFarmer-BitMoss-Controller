@@ -25,7 +25,33 @@
 
 ```
 
+소스설명
+ --------------
+TinyFarmer-BitMoss-Controller/src/BitmossControl_128A/BitmossControl_128A.ino
 
+위의 소스 파일을 그대로 사용할 수 있습니다. 단, 몇가지 추가 장착되는 모듈에 대한 수정이 발생될 수 있습니다.
+
+1. LCD
+i2c를 인터페이스로 사용하는 character LCD를 활용하여 추가적인 신호선 사용을 줄였습니다.
+
+[*상세한 LCD 스팩 보기 - 사이트 바로가기*](https://www.icbanq.com/P007320703)
+
+ ![IIC/I2C 1602 LCD 모듈](https://github.com/makezonefablab/TinyFarmer-BitMoss-Controller/blob/master/img/bitmossController.png)
+ 
+ LCD 화면 Arduino IIC LCD1602 / I2C 인터페이스 어댑터 플레이트 Arduino 보드 입출력 20
+
+일부 센서, SD 카드, 전원 공급 장치 전압, + 5 V를 추가 파란색 백라이트 LCD 디스플레이입니다.
+
+Arduino 컨트롤러의 핀 리소스가 제한되어 있으므로 일정량의 센서 또는 SD 카드를 연결한 후에 프로젝트에서 일반 LCD 실드를 사용할 수 없습니다.
+
+그러나 이 I2C 인터페이스 LCD 모듈을 사용하면 단 2 개의 와이어를 통해 데이터를 표시 할 수 있습니다.
+
+I2C 주소 : 0x27.백라이트 (파란색 배경의 흰색 문자).
+공급 전압 : 5V.
+
+듀폰 라인으로 연결할 수있는 IIC 인터페이스가 있습니다.
+
+크기 : 3.6cm x 8cm - 1.4inch x 3.1inch.
 
 설치 
 --------------
