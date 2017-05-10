@@ -25,7 +25,7 @@
 
 ```
 
-소스설명
+설명
  --------------
 TinyFarmer-BitMoss-Controller/src/BitmossControl_128A/BitmossControl_128A.ino
 
@@ -38,13 +38,9 @@ i2c를 인터페이스로 사용하는 character LCD를 활용하여 추가적�
 
  ![IIC/I2C 1602 LCD 모듈](https://github.com/makezonefablab/TinyFarmer-BitMoss-Controller/blob/master/img/023304.jpg)
 ```
-LCD 화면 Arduino IIC LCD1602 / I2C 인터페이스 어댑터 플레이트 
- 
-Arduino 보드 입출력 20 일부 센서, SD 카드, 전원 공급 장치 전압, + 5 V를 추가 파란색 백라이트 LCD 디스플레이입니다.
-
++ 5 V를 추가 파란색 백라이트 LCD 디스플레이입니다.
 Arduino 컨트롤러의 핀 리소스가 제한되어 있으므로 일정량의 센서 또는 SD 카드를 연결한 후에 프로젝트에서 일반 LCD 실드를 사용할 수 없습니다.
-
-그러나 이 I2C 인터페이스 LCD 모듈을 사용하면 단 2 개의 와이어를 통해 데이터를 표시 할 수 있습니다.
+I2C 인터페이스 LCD 모듈을 사용하면 단 2 개의 와이어를 통해 데이터를 표시 할 수 있습니다.
 
 I2C 주소 : 0x27.백라이트 (파란색 배경의 흰색 문자).
 공급 전압 : 5V.
@@ -53,6 +49,38 @@ I2C 주소 : 0x27.백라이트 (파란색 배경의 흰색 문자).
 
 크기 : 3.6cm x 8cm - 1.4inch x 3.1inch.
 ```
+
+TinyFarmer-BitMoss-Controller/src/BitmossControl_128A/LCD.h 의 파일에서 모듈마다 지정된 주소값을 수정하여 줍니다.
+현재 적용된 위의 LCD는 0x27을 사용합니다.
+
+```
+// Date and time functions using a DS1307 RTC connected via I2C and Wire lib
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+#include "RTClib.h"
+
+#if defined(ARDUINO) && ARDUINO >= 100
+#define printByte(args)  write(args);
+#else
+#define printByte(args)  print(args,BYTE);
+#endif
+
+LiquidCrystal_I2C lcd(0x27,16,2);  // 여기서 LCD의 i2c주소를 지정합니다. 현재 0x27
+
+byte schedICON[8] = {
+  B01110,
+  B10101,
+  B10101,
+  B10111,
+  B10001,
+  B01110,
+  B00000,
+};
+
+......
+```
+
+
 
 설치 
 --------------
