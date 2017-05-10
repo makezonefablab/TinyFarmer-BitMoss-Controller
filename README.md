@@ -52,6 +52,7 @@ I2C 주소 : 0x27.백라이트 (파란색 배경의 흰색 문자).
 ```
 
 TinyFarmer-BitMoss-Controller/src/BitmossControl_128A/LCD.h 의 파일에서 모듈마다 지정된 주소값을 수정하여 줍니다.
+
 현재 적용된 위의 LCD는 0x27을 사용합니다.
 
 ```
