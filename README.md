@@ -1,4 +1,4 @@
-# TinyFarmer-BitMoss-Controller
+# TinyFarmer-BitMoss-Controller - not supported
   
   
  ![TinyFarmer-Bitmoss-Controller Intro](https://github.com/makezonefablab/TinyFarmer-BitMoss-Controller/blob/master/img/bitmossController.png)      
@@ -17,6 +17,9 @@
 
 
 ### Latest version 
+
+> **소스 개정을 더 이상 지원하지 않음 (2018.01.15) - 비트모스 쉴드 사용권장**
+
 2017.05.02
 ```
 - 통신보안(security)기능 적용
