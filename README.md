@@ -1,5 +1,4 @@
-# TinyFarmer-BitMoss-Controller - not supported
-  
+# TinyFarmer-BitMoss-Controller (not suported)
   
  ![TinyFarmer-Bitmoss-Controller Intro](https://github.com/makezonefablab/TinyFarmer-BitMoss-Controller/blob/master/img/bitmossController.png)      
  
